@@ -1,0 +1,146 @@
+[gd_scene format=3 uid="uid://daieso5cog8ke"]
+
+[ext_resource type="Script" uid="uid://bdh7jrtftv7wl" path="res://scripts/chat_bubble.gd" id="1_gjmhe"]
+[ext_resource type="StyleBox" uid="uid://dsohj42hduttp" path="res://themes/sbf-dd-normal.tres" id="1_nmkwm"]
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="2_gjmhe"]
+[ext_resource type="Script" uid="uid://dbap0gqox0ty1" path="res://addons/markdownlabel/markdownlabel.gd" id="3_ogtcd"]
+[ext_resource type="Script" uid="uid://dcx7crs23nf4" path="res://addons/markdownlabel/header_formats/h1_format.gd" id="4_nmkwm"]
+[ext_resource type="Script" uid="uid://d0sin64i4v3op" path="res://addons/markdownlabel/header_formats/h2_format.gd" id="5_e7nsc"]
+[ext_resource type="Script" uid="uid://dlok0dv1tq2bf" path="res://addons/markdownlabel/header_formats/h3_format.gd" id="6_3874c"]
+[ext_resource type="Script" uid="uid://bayuh2vafablg" path="res://addons/markdownlabel/header_formats/h4_format.gd" id="7_e0nxn"]
+[ext_resource type="Script" uid="uid://dfr1w7u3jgni3" path="res://addons/markdownlabel/header_formats/h5_format.gd" id="8_2gwsl"]
+[ext_resource type="Script" uid="uid://bsi6dexoofpe6" path="res://addons/markdownlabel/header_formats/h6_format.gd" id="9_8t6d4"]
+
+[sub_resource type="Resource" id="Resource_avh4v"]
+resource_local_to_scene = true
+script = ExtResource("4_nmkwm")
+font_size = 1.5
+
+[sub_resource type="Resource" id="Resource_c2bn1"]
+resource_local_to_scene = true
+script = ExtResource("5_e7nsc")
+font_size = 1.4
+
+[sub_resource type="Resource" id="Resource_mv0n5"]
+resource_local_to_scene = true
+script = ExtResource("6_3874c")
+font_size = 1.2
+
+[sub_resource type="Resource" id="Resource_wdtpg"]
+resource_local_to_scene = true
+script = ExtResource("7_e0nxn")
+font_size = 1.1
+
+[sub_resource type="Resource" id="Resource_7lj2k"]
+resource_local_to_scene = true
+script = ExtResource("8_2gwsl")
+
+[sub_resource type="Resource" id="Resource_5735v"]
+resource_local_to_scene = true
+script = ExtResource("9_8t6d4")
+font_size = 0.7
+
+[node name="RootPanel" type="PanelContainer" unique_id=60847830]
+offset_right = 950.0
+offset_bottom = 130.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_styles/panel = ExtResource("1_nmkwm")
+script = ExtResource("1_gjmhe")
+
+[node name="RootMargin" type="MarginContainer" parent="." unique_id=213949870]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="RootRaise" type="VBoxContainer" parent="RootMargin" unique_id=1204062731]
+layout_mode = 2
+
+[node name="InfoSplit" type="HBoxContainer" parent="RootMargin/RootRaise" unique_id=2133655665]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="SenderLabel" type="Label" parent="RootMargin/RootRaise/InfoSplit" unique_id=675161540]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "TutorAI"
+vertical_alignment = 1
+
+[node name="IndexLabel" type="Label" parent="RootMargin/RootRaise/InfoSplit" unique_id=285315376]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1/3 "
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="RootSplit" type="HBoxContainer" parent="RootMargin/RootRaise" unique_id=1371885392]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SidebarSplit" type="VBoxContainer" parent="RootMargin/RootRaise/RootSplit" unique_id=290907039]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="IconCenter" type="CenterContainer" parent="RootMargin/RootRaise/RootSplit/SidebarSplit" unique_id=2104440554]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="IconTexture" type="TextureRect" parent="RootMargin/RootRaise/RootSplit/SidebarSplit/IconCenter" unique_id=1338695139]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("2_gjmhe")
+
+[node name="FunctionSplit" type="HBoxContainer" parent="RootMargin/RootRaise/RootSplit/SidebarSplit" unique_id=2110376412]
+layout_mode = 2
+
+[node name="CopyButton" type="Button" parent="RootMargin/RootRaise/RootSplit/SidebarSplit/FunctionSplit" unique_id=1653449910]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "C"
+
+[node name="RedoButton" type="Button" parent="RootMargin/RootRaise/RootSplit/SidebarSplit/FunctionSplit" unique_id=233685031]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "R"
+
+[node name="ReadButton" type="Button" parent="RootMargin/RootRaise/RootSplit/SidebarSplit/FunctionSplit" unique_id=2091561104]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "S"
+
+[node name="MessageMargin" type="MarginContainer" parent="RootMargin/RootRaise/RootSplit" unique_id=1793409353]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="MessageMDL" type="RichTextLabel" parent="RootMargin/RootRaise/RootSplit/MessageMargin" unique_id=1060935357]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 2
+theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/bold_font_size = 25
+bbcode_enabled = true
+fit_content = true
+selection_enabled = true
+script = ExtResource("3_ogtcd")
+markdown_text = "To ask me a question, **type** it into the **input field** below!"
+h1 = SubResource("Resource_avh4v")
+h2 = SubResource("Resource_c2bn1")
+h3 = SubResource("Resource_mv0n5")
+h4 = SubResource("Resource_wdtpg")
+h5 = SubResource("Resource_7lj2k")
+h6 = SubResource("Resource_5735v")
+metadata/_custom_type_script = "uid://dbap0gqox0ty1"
+
+[connection signal="pressed" from="RootMargin/RootRaise/RootSplit/SidebarSplit/FunctionSplit/CopyButton" to="." method="_on_copy_button_pressed"]

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Grafika (https://www.grafika.cc/) -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="199.91" viewBox="0 0 1080 1080" preserveAspectRatio="xMidYMid meet">
+	<g transform="matrix(1, 0, 0, 1, 540, 540)">
+		<path d="M-277.51,-265.65 C-208.98,-335.02 -113.81,-378 -8.6,-378 C200.17,-378 369.4,-208.76 369.4,0 C369.4,208.76 200.17,378 -8.6,378 C-114.61,378 -201.07,351.82 -269.71,281.52" style="fill:none;stroke:#FFFFFF;stroke-linecap:round;stroke-linejoin:round;stroke-width:50;" />
+		<line x1="-277.51" y1="-265.96" x2="-184.8" y2="-265.96" style="fill:none;stroke:#FFFFFF;stroke-linecap:round;stroke-linejoin:round;stroke-width:50;" />
+		<line transform="matrix(-0.000000003382946811569809, 1.0000001192092896, -1.0000001192092896, -0.000000003382946811569809, -543.4674072265625, -131.12579345703125)" x1="-227.83" y1="-280.94" x2="-134.83" y2="-265.96" style="fill:none;stroke:#FFFFFF;stroke-linecap:round;stroke-linejoin:round;stroke-width:50;" />
+		<line x1="-25.68" y1="32.9" x2="112.39" y2="32.9" style="fill:none;stroke:#FFFFFF;stroke-linecap:round;stroke-linejoin:round;stroke-width:50;" />
+		<line transform="matrix(-0.000000007427099379953006, -1, 1, -0.000000007427099379953006, -25.68218994140625, 32.89752197265625)" x1="0" y1="0" x2="137.66" y2="0" style="fill:none;stroke:#FFFFFF;stroke-linecap:round;stroke-linejoin:round;stroke-width:50;" />
+	</g>
+</svg>

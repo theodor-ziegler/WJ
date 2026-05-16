@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Grafika (https://www.grafika.cc/) -->
+
+<svg
+   width="200"
+   height="199.91"
+   viewBox="0 0 1080 1080"
+   preserveAspectRatio="xMidYMid meet"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="Expand.svg"
+   inkscape:version="1.4.2 (ebf0e94, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#585858"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="false"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="4.0151401"
+     inkscape:cx="101.36633"
+     inkscape:cy="106.59653"
+     inkscape:window-width="2520"
+     inkscape:window-height="1412"
+     inkscape:window-x="40"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <g
+     id="path2"
+     style="opacity:1">
+    <path
+       style="baseline-shift:baseline;display:inline;overflow:visible;vector-effect:none;fill:#ffffff;fill-rule:evenodd;enable-background:accumulate;stop-color:#000000;stop-opacity:1"
+       d="M 785.09375,260.36133 241.50586,797.22266 277.37695,833.54102 820.96484,296.68164 Z"
+       id="path8" />
+    <g
+       id="g6">
+      <path
+         style="baseline-shift:baseline;display:inline;overflow:visible;vector-effect:none;fill:#ffffff;stroke-linecap:round;enable-background:accumulate;stop-color:#000000;stop-opacity:1;opacity:1"
+         d="m 251.86914,582.25781 a 25.5233,25.5233 0 0 0 -25.68164,25.36524 l -1.50781,242.08984 242.09179,1.50781 a 25.5233,25.5233 0 0 0 25.68164,-25.36328 25.5233,25.5233 0 0 0 -25.36523,-25.68164 l -191.04492,-1.19141 1.18945,-191.04492 a 25.5233,25.5233 0 0 0 -25.36328,-25.68164 z"
+         id="path6" />
+      <path
+         style="baseline-shift:baseline;display:inline;overflow:visible;vector-effect:none;fill:#ffffff;stroke-linecap:round;enable-background:accumulate;stop-color:#000000;stop-opacity:1;opacity:1"
+         d="m 595.69922,242.68359 a 25.5233,25.5233 0 0 0 -25.68164,25.36328 25.5233,25.5233 0 0 0 25.36523,25.68165 l 191.04492,1.18945 -1.18945,191.04492 a 25.5233,25.5233 0 0 0 25.36328,25.68164 25.5233,25.5233 0 0 0 25.68164,-25.36328 l 1.50782,-242.0918 z"
+         id="path7" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Grafika (https://www.grafika.cc/) -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="199.91" viewBox="0 0 1080 1080" preserveAspectRatio="xMidYMid meet">
+	<g transform="matrix(1, 0, 0, 1, 540, 540)">
+		<line x1="-378" y1="200" x2="378" y2="200" style="fill:none;stroke:#FFFFFF;stroke-linecap:round;stroke-linejoin:round;stroke-width:50;" />
+		<line x1="-378" y1="0" x2="378" y2="-0" style="fill:none;stroke:#FFFFFF;stroke-linecap:round;stroke-linejoin:round;stroke-width:50;" />
+		<line x1="-378" y1="-200" x2="378" y2="-200" style="fill:none;stroke:#FFFFFF;stroke-linecap:round;stroke-linejoin:round;stroke-width:50;" />
+	</g>
+</svg>

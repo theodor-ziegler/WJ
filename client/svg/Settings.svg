@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Grafika (https://www.grafika.cc/) -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="199.91" viewBox="0 0 1080 1080" preserveAspectRatio="xMidYMid meet">
+	<g transform="matrix(1, 0, 0, 1, 540, 540)">
+		<ellipse cx="0" cy="0" rx="100.96" ry="100.96" style="fill:none;stroke:#FFFFFF;stroke-linecap:round;stroke-linejoin:round;stroke-width:50;" />
+		<path transform="matrix(0.9156056642532349, -0.4020778238773346, 0.4020778238773346, 0.9156056642532349, 0, 0)" d="M298.39,0 C366.24,160.83 366.24,160.83 210.63,211.35 C156.07,390.73 156.53,389.67 0,298.39 C-160.83,366.24 -158.96,361.97 -214.75,207.17 C-394,151.09 -394.6,152.46 -298.39,0 C-366.24,-160.83 -364.92,-160.25 -207.13,-214.79 C-151.49,-391.94 -150.06,-393.55 -0,-298.39 C160.83,-366.24 160.83,-366.24 213,-208.97 C394.93,-153.19 395.3,-154.06 298.39,0 Z" style="fill:none;stroke:#FFFFFF;stroke-linecap:round;stroke-linejoin:round;stroke-width:50;" />
+	</g>
+</svg>
