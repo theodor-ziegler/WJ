@@ -49,6 +49,11 @@
 2. Führe das Programm via den Pfeil oben links im Fenster aus
 3. Öffne das Einstellungsmenü des Clients und setze die Server-IP auf die Netzwerkadresse auf jene des selbst aufgesetzten Servers (Sollten Server und Client auf einem Gerät aktiv sein, nutze `localhost`)
 
+## Fehlerbehebung des Clients
+Es kann passieren, dass die Godot Engine eine Fehlermeldung zu `MarkdownLabel.gd` ausgibt und den Plugin deaktiviert. Ohne MarkdownLabel funktioniert das Anzeigen von Nachrichten nicht korrekt.
+Öffne in diesem Fall das Menü "Projekteinstellungen" bzw "Project Settings" im Reiter "Projekt" bzw "Project" oben links, navigiere zum Reiter "Plugins", und setze bei "MarkdownLabel" ein Häckchen. 
+Nach schließen des Fensters sollte das Programm korrekt funktionieren.
+
 # Nutzung
 Im Hauptfenster befinden sich eine Eingabeleiste (unten mittig), ein Sendeknopf (unten rechts) und eine Navigationsleiste (linker Rand). 
 Die Bedienung ähnelt bewusst gängigen LLMs: Der Prompt wird in die Eingabeleiste geschrieben und via den Sendeknopf abgeschickt, danach erscheint die soeben gesendete Nachricht als Chatbox im Verlaufbereich (mittig, Großteil des Bildschirms).
