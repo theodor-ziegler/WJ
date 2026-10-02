@@ -1,0 +1,314 @@
+[gd_scene format=3 uid="uid://5qaneidsij0m"]
+
+[ext_resource type="Theme" uid="uid://bcnoy5rclal60" path="res://themes/default-dark.tres" id="1_qncfr"]
+[ext_resource type="Script" uid="uid://bw7uijm5a1il0" path="res://scripts/window.gd" id="1_to7fh"]
+[ext_resource type="Texture2D" uid="uid://dg5r8bro0mu4f" path="res://svg/Hamburger.svg" id="2_ot01e"]
+[ext_resource type="Texture2D" uid="uid://yea0oiue7nmf" path="res://svg/History.svg" id="2_qnju7"]
+[ext_resource type="Texture2D" uid="uid://dyq6avxqix54d" path="res://svg/Profile.svg" id="3_ato5p"]
+[ext_resource type="Texture2D" uid="uid://b5ef6g1efu77g" path="res://svg/Search.svg" id="3_qncfr"]
+[ext_resource type="Texture2D" uid="uid://0kc1ryhgr86j" path="res://svg/Settings.svg" id="4_syahi"]
+[ext_resource type="Texture2D" uid="uid://ddqma5ol0vdfn" path="res://svg/Paste.svg" id="6_syahi"]
+[ext_resource type="Texture2D" uid="uid://bixppi40x1sme" path="res://svg/Send.svg" id="9_k52h1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k52h1"]
+bg_color = Color(0, 0, 0, 0.25490198)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_shje2"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+border_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="RootPanel" type="PanelContainer" unique_id=1459467389]
+offset_right = 1080.0
+offset_bottom = 720.0
+theme = ExtResource("1_qncfr")
+theme_override_styles/panel = SubResource("StyleBoxFlat_k52h1")
+script = ExtResource("1_to7fh")
+
+[node name="RootMargin" type="MarginContainer" parent="." unique_id=822940224]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="RootSplit" type="VBoxContainer" parent="RootMargin" unique_id=575132207]
+layout_mode = 2
+
+[node name="StatusInfoPanel" type="PanelContainer" parent="RootMargin/RootSplit" unique_id=955996312]
+layout_mode = 2
+
+[node name="StatusInfoMargin" type="MarginContainer" parent="RootMargin/RootSplit/StatusInfoPanel" unique_id=1335124565]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 3
+
+[node name="StatusInfoLabel" type="Label" parent="RootMargin/RootSplit/StatusInfoPanel/StatusInfoMargin" unique_id=2055679723]
+layout_mode = 2
+text = "Online | Connected"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MainSplit" type="VBoxContainer" parent="RootMargin/RootSplit" unique_id=1602371111]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SubSplit" type="HBoxContainer" parent="RootMargin/RootSplit/MainSplit" unique_id=1053221274]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ToolbarPanel" type="PanelContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit" unique_id=739745282]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="ToolbarMargin" type="MarginContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit/ToolbarPanel" unique_id=1367799979]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ToolbarSplit" type="VBoxContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit/ToolbarPanel/ToolbarMargin" unique_id=1440056672]
+layout_mode = 2
+
+[node name="FileButton" type="Button" parent="RootMargin/RootSplit/MainSplit/SubSplit/ToolbarPanel/ToolbarMargin/ToolbarSplit" unique_id=1982361375]
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 3
+disabled = true
+text = "Attach File"
+icon = ExtResource("6_syahi")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="SearchButton" type="Button" parent="RootMargin/RootSplit/MainSplit/SubSplit/ToolbarPanel/ToolbarMargin/ToolbarSplit" unique_id=1589793399]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 20
+disabled = true
+text = "Search"
+icon = ExtResource("3_qncfr")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="HistoryButton" type="Button" parent="RootMargin/RootSplit/MainSplit/SubSplit/ToolbarPanel/ToolbarMargin/ToolbarSplit" unique_id=1951537956]
+layout_mode = 2
+size_flags_vertical = 3
+text = "History"
+icon = ExtResource("2_qnju7")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="ProfileButton" type="Button" parent="RootMargin/RootSplit/MainSplit/SubSplit/ToolbarPanel/ToolbarMargin/ToolbarSplit" unique_id=900147611]
+layout_mode = 2
+size_flags_vertical = 3
+disabled = true
+text = "Profile"
+icon = ExtResource("3_ato5p")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="SettingsButton" type="Button" parent="RootMargin/RootSplit/MainSplit/SubSplit/ToolbarPanel/ToolbarMargin/ToolbarSplit" unique_id=382233623]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Settings"
+icon = ExtResource("4_syahi")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="ChatPanel" type="PanelContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit" unique_id=774019564]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ChatSplit" type="VBoxContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit/ChatPanel" unique_id=479869438]
+layout_mode = 2
+
+[node name="ChatLabel" type="Label" parent="RootMargin/RootSplit/MainSplit/SubSplit/ChatPanel/ChatSplit" unique_id=35010631]
+layout_mode = 2
+text = "Chat"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ChatMargin" type="MarginContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit/ChatPanel/ChatSplit" unique_id=2012535059]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ChatScroll" type="ScrollContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit/ChatPanel/ChatSplit/ChatMargin" unique_id=202143345]
+layout_mode = 2
+follow_focus = true
+scroll_hint_mode = 3
+
+[node name="ChatMain" type="VBoxContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit/ChatPanel/ChatSplit/ChatMargin/ChatScroll" unique_id=406280471]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HistoryPanel" type="PanelContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit" unique_id=900934067]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HistorySplit" type="VBoxContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit/HistoryPanel" unique_id=847276891]
+layout_mode = 2
+
+[node name="HistoryLabel" type="Label" parent="RootMargin/RootSplit/MainSplit/SubSplit/HistoryPanel/HistorySplit" unique_id=48959945]
+layout_mode = 2
+text = "History"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HistoryMargin" type="MarginContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit/HistoryPanel/HistorySplit" unique_id=1285247544]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HistoryScroll" type="ScrollContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit/HistoryPanel/HistorySplit/HistoryMargin" unique_id=520627855]
+layout_mode = 2
+follow_focus = true
+scroll_hint_mode = 3
+
+[node name="HistoryMain" type="VBoxContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit/HistoryPanel/HistorySplit/HistoryMargin/HistoryScroll" unique_id=1100489123]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SettingsPanel" type="PanelContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit" unique_id=1461957483]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SettingsSplit" type="VBoxContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit/SettingsPanel" unique_id=1996179588]
+layout_mode = 2
+
+[node name="SettingsLabel" type="Label" parent="RootMargin/RootSplit/MainSplit/SubSplit/SettingsPanel/SettingsSplit" unique_id=1538398154]
+layout_mode = 2
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SettingsMargin" type="MarginContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit/SettingsPanel/SettingsSplit" unique_id=93109470]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="SettingsMain" type="VBoxContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit/SettingsPanel/SettingsSplit/SettingsMargin" unique_id=1067338157]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="EntryIP" type="PanelContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit/SettingsPanel/SettingsSplit/SettingsMargin/SettingsMain" unique_id=1856933892]
+layout_mode = 2
+
+[node name="IPSplit" type="HBoxContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit/SettingsPanel/SettingsSplit/SettingsMargin/SettingsMain/EntryIP" unique_id=409042156]
+layout_mode = 2
+
+[node name="IPLabel" type="Label" parent="RootMargin/RootSplit/MainSplit/SubSplit/SettingsPanel/SettingsSplit/SettingsMargin/SettingsMain/EntryIP/IPSplit" unique_id=954175740]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Server IP: "
+vertical_alignment = 1
+
+[node name="IPEdit" type="LineEdit" parent="RootMargin/RootSplit/MainSplit/SubSplit/SettingsPanel/SettingsSplit/SettingsMargin/SettingsMain/EntryIP/IPSplit" unique_id=1444425150]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "neuros.click"
+placeholder_text = "Server IP"
+clear_button_enabled = true
+
+[node name="InputPanel" type="PanelContainer" parent="RootMargin/RootSplit/MainSplit" unique_id=1351366134]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="InputMargin" type="MarginContainer" parent="RootMargin/RootSplit/MainSplit/InputPanel" unique_id=553535201]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="InputMain" type="HBoxContainer" parent="RootMargin/RootSplit/MainSplit/InputPanel/InputMargin" unique_id=878671907]
+layout_mode = 2
+
+[node name="MenuButton" type="Button" parent="RootMargin/RootSplit/MainSplit/InputPanel/InputMargin/InputMain" unique_id=1436639539]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Toolbar"
+icon = ExtResource("2_ot01e")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="PromptEdit" type="TextEdit" parent="RootMargin/RootSplit/MainSplit/InputPanel/InputMargin/InputMain" unique_id=297330194]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_shje2")
+placeholder_text = "Type here to chat!"
+wrap_mode = 1
+scroll_smooth = true
+scroll_fit_content_height = true
+minimap_draw = true
+
+[node name="SendButton" type="Button" parent="RootMargin/RootSplit/MainSplit/InputPanel/InputMargin/InputMain" unique_id=84688108]
+custom_minimum_size = Vector2(100, 100)
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 8
+text = "Send"
+icon = ExtResource("9_k52h1")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="VersionInfoPanel" type="PanelContainer" parent="RootMargin/RootSplit" unique_id=7047984]
+layout_mode = 2
+
+[node name="VersionInfoMargin" type="MarginContainer" parent="RootMargin/RootSplit/VersionInfoPanel" unique_id=826362435]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 3
+
+[node name="VersionInfoLabel" type="Label" parent="RootMargin/RootSplit/VersionInfoPanel/VersionInfoMargin" unique_id=35432448]
+layout_mode = 2
+text = "v27 / 2.1.4 |DeepDev|Features|Settings"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[connection signal="pressed" from="RootMargin/RootSplit/MainSplit/SubSplit/ToolbarPanel/ToolbarMargin/ToolbarSplit/HistoryButton" to="." method="_on_history_button_pressed"]
+[connection signal="pressed" from="RootMargin/RootSplit/MainSplit/SubSplit/ToolbarPanel/ToolbarMargin/ToolbarSplit/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="text_submitted" from="RootMargin/RootSplit/MainSplit/SubSplit/SettingsPanel/SettingsSplit/SettingsMargin/SettingsMain/EntryIP/IPSplit/IPEdit" to="." method="_on_ip_edit_text_submitted"]
+[connection signal="pressed" from="RootMargin/RootSplit/MainSplit/InputPanel/InputMargin/InputMain/MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="RootMargin/RootSplit/MainSplit/InputPanel/InputMargin/InputMain/SendButton" to="." method="_on_send_button_pressed"]
