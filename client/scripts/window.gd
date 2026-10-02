@@ -1,13 +1,15 @@
 extends PanelContainer
 
 
-@onready var chat_main: VBoxContainer = $RootMargin/RootSplit/MainSplit/SubSplit/ChatPanel/ChatMargin/ChatScroll/ChatMain
+
 @onready var prompt_edit: TextEdit = $RootMargin/RootSplit/MainSplit/InputPanel/InputMargin/InputMain/PromptEdit
 @onready var status_label: Label = $RootMargin/RootSplit/StatusInfoPanel/StatusInfoMargin/StatusInfoLabel
 @onready var toolbar_panel: PanelContainer = $RootMargin/RootSplit/MainSplit/SubSplit/ToolbarPanel
 @onready var chat_panel: PanelContainer = $RootMargin/RootSplit/MainSplit/SubSplit/ChatPanel
+@onready var chat_main: VBoxContainer = $RootMargin/RootSplit/MainSplit/SubSplit/ChatPanel/ChatSplit/ChatMargin/ChatScroll/ChatMain
 @onready var history_panel: PanelContainer = $RootMargin/RootSplit/MainSplit/SubSplit/HistoryPanel
-@onready var history_main: VBoxContainer = $RootMargin/RootSplit/MainSplit/SubSplit/HistoryPanel/HistoryMargin/HistoryScroll/HistoryMain
+@onready var history_main: VBoxContainer = $RootMargin/RootSplit/MainSplit/SubSplit/HistoryPanel/HistorySplit/HistoryMargin/HistoryScroll/HistoryMain
+@onready var settings_panel: PanelContainer = $RootMargin/RootSplit/MainSplit/SubSplit/SettingsPanel
 
 var chatbubblepre: PackedScene = preload("res://scenes/chat_bubble.tscn")
 var message_index: int = 0
@@ -24,7 +26,7 @@ var active_panel: panel_types = panel_types.CHAT
 
 enum ping_states {ONLINE, WAITING, OFFLINE, DEAD}
 enum web_states {ONLINE, WAITING, OFFLINE}
-enum panel_types {CHAT, HISTORY}
+enum panel_types {CHAT, HISTORY, SETTINGS}
 
 var ping_status_indices = {
 	ping_states.ONLINE: "Connected",
@@ -195,9 +197,17 @@ func _on_history_button_pressed() -> void:
 	#test_features()
 	backend.queue_get_context_list()
 
+func _on_settings_button_pressed() -> void:
+	open_panel(panel_types.SETTINGS)
+
+func _on_ip_edit_text_submitted(new_text: String) -> void:
+	print("[DEB] [SVR] Setting Server IP To: ", new_text)
+	backend.set_server(new_text)
+
 func open_panel(_panel: panel_types):
 	chat_panel.visible = false
 	history_panel.visible = false
+	settings_panel.visible = false
 	match _panel:
 		panel_types.CHAT:
 			print("[DEB] [PAN] Opening Panel: CHAT")
@@ -205,6 +215,9 @@ func open_panel(_panel: panel_types):
 		panel_types.HISTORY:
 			print("[DEB] [PAN] Opening Panel: HISTORY")
 			history_panel.visible = true
+		panel_types.SETTINGS:
+			print("[DEB] [PAN] Opening Panel: SETTINGS")
+			settings_panel.visible = true
 
 func on_history_context_open(_index):
 	print("[DEB] [HIS] Opening Historic Context At Index: ", _index)
@@ -227,4 +240,3 @@ func test_features() -> void:
 	print("[INF] [TST] Test Function Started - Not Release Ready!")
 	var hisobj = EntryObject.new(0,Vector3i(01,01,1970),"Test Entry","This is a test!")
 	add_history_entry(hisobj)
-	

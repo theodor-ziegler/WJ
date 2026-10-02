@@ -111,7 +111,7 @@ expand_icon = true
 [node name="HistoryButton" type="Button" parent="RootMargin/RootSplit/MainSplit/SubSplit/ToolbarPanel/ToolbarMargin/ToolbarSplit" unique_id=1951537956]
 layout_mode = 2
 size_flags_vertical = 3
-text = "Other Chats"
+text = "History"
 icon = ExtResource("2_qnju7")
 icon_alignment = 1
 vertical_icon_alignment = 0
@@ -130,7 +130,6 @@ expand_icon = true
 [node name="SettingsButton" type="Button" parent="RootMargin/RootSplit/MainSplit/SubSplit/ToolbarPanel/ToolbarMargin/ToolbarSplit" unique_id=382233623]
 layout_mode = 2
 size_flags_vertical = 3
-disabled = true
 text = "Settings"
 icon = ExtResource("4_syahi")
 icon_alignment = 1
@@ -142,19 +141,28 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="ChatMargin" type="MarginContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit/ChatPanel" unique_id=2012535059]
+[node name="ChatSplit" type="VBoxContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit/ChatPanel" unique_id=479869438]
+layout_mode = 2
+
+[node name="ChatLabel" type="Label" parent="RootMargin/RootSplit/MainSplit/SubSplit/ChatPanel/ChatSplit" unique_id=35010631]
+layout_mode = 2
+text = "Chat"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ChatMargin" type="MarginContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit/ChatPanel/ChatSplit" unique_id=2012535059]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="ChatScroll" type="ScrollContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit/ChatPanel/ChatMargin" unique_id=202143345]
+[node name="ChatScroll" type="ScrollContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit/ChatPanel/ChatSplit/ChatMargin" unique_id=202143345]
 layout_mode = 2
 follow_focus = true
 scroll_hint_mode = 3
 
-[node name="ChatMain" type="VBoxContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit/ChatPanel/ChatMargin/ChatScroll" unique_id=406280471]
+[node name="ChatMain" type="VBoxContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit/ChatPanel/ChatSplit/ChatMargin/ChatScroll" unique_id=406280471]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -164,22 +172,77 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="HistoryMargin" type="MarginContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit/HistoryPanel" unique_id=1285247544]
+[node name="HistorySplit" type="VBoxContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit/HistoryPanel" unique_id=847276891]
+layout_mode = 2
+
+[node name="HistoryLabel" type="Label" parent="RootMargin/RootSplit/MainSplit/SubSplit/HistoryPanel/HistorySplit" unique_id=48959945]
+layout_mode = 2
+text = "History"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HistoryMargin" type="MarginContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit/HistoryPanel/HistorySplit" unique_id=1285247544]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="HistoryScroll" type="ScrollContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit/HistoryPanel/HistoryMargin" unique_id=520627855]
+[node name="HistoryScroll" type="ScrollContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit/HistoryPanel/HistorySplit/HistoryMargin" unique_id=520627855]
 layout_mode = 2
 follow_focus = true
 scroll_hint_mode = 3
 
-[node name="HistoryMain" type="VBoxContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit/HistoryPanel/HistoryMargin/HistoryScroll" unique_id=1100489123]
+[node name="HistoryMain" type="VBoxContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit/HistoryPanel/HistorySplit/HistoryMargin/HistoryScroll" unique_id=1100489123]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="SettingsPanel" type="PanelContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit" unique_id=1461957483]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SettingsSplit" type="VBoxContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit/SettingsPanel" unique_id=1996179588]
+layout_mode = 2
+
+[node name="SettingsLabel" type="Label" parent="RootMargin/RootSplit/MainSplit/SubSplit/SettingsPanel/SettingsSplit" unique_id=1538398154]
+layout_mode = 2
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SettingsMargin" type="MarginContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit/SettingsPanel/SettingsSplit" unique_id=93109470]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="SettingsMain" type="VBoxContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit/SettingsPanel/SettingsSplit/SettingsMargin" unique_id=1067338157]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="EntryIP" type="PanelContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit/SettingsPanel/SettingsSplit/SettingsMargin/SettingsMain" unique_id=1856933892]
+layout_mode = 2
+
+[node name="IPSplit" type="HBoxContainer" parent="RootMargin/RootSplit/MainSplit/SubSplit/SettingsPanel/SettingsSplit/SettingsMargin/SettingsMain/EntryIP" unique_id=409042156]
+layout_mode = 2
+
+[node name="IPLabel" type="Label" parent="RootMargin/RootSplit/MainSplit/SubSplit/SettingsPanel/SettingsSplit/SettingsMargin/SettingsMain/EntryIP/IPSplit" unique_id=954175740]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Server IP: "
+vertical_alignment = 1
+
+[node name="IPEdit" type="LineEdit" parent="RootMargin/RootSplit/MainSplit/SubSplit/SettingsPanel/SettingsSplit/SettingsMargin/SettingsMain/EntryIP/IPSplit" unique_id=1444425150]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "neuros.click"
+placeholder_text = "Server IP"
+clear_button_enabled = true
 
 [node name="InputPanel" type="PanelContainer" parent="RootMargin/RootSplit/MainSplit" unique_id=1351366134]
 custom_minimum_size = Vector2(0, 100)
@@ -218,8 +281,8 @@ scroll_fit_content_height = true
 minimap_draw = true
 
 [node name="SendButton" type="Button" parent="RootMargin/RootSplit/MainSplit/InputPanel/InputMargin/InputMain" unique_id=84688108]
-clip_contents = true
 custom_minimum_size = Vector2(100, 100)
+clip_contents = true
 layout_mode = 2
 size_flags_vertical = 8
 text = "Send"
@@ -240,10 +303,12 @@ theme_override_constants/margin_bottom = 3
 
 [node name="VersionInfoLabel" type="Label" parent="RootMargin/RootSplit/VersionInfoPanel/VersionInfoMargin" unique_id=35432448]
 layout_mode = 2
-text = "v26 / 2.1.3 |DeepDev|Features|History"
+text = "v27 / 2.1.4 |DeepDev|Features|Settings"
 horizontal_alignment = 2
 vertical_alignment = 2
 
 [connection signal="pressed" from="RootMargin/RootSplit/MainSplit/SubSplit/ToolbarPanel/ToolbarMargin/ToolbarSplit/HistoryButton" to="." method="_on_history_button_pressed"]
+[connection signal="pressed" from="RootMargin/RootSplit/MainSplit/SubSplit/ToolbarPanel/ToolbarMargin/ToolbarSplit/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="text_submitted" from="RootMargin/RootSplit/MainSplit/SubSplit/SettingsPanel/SettingsSplit/SettingsMargin/SettingsMain/EntryIP/IPSplit/IPEdit" to="." method="_on_ip_edit_text_submitted"]
 [connection signal="pressed" from="RootMargin/RootSplit/MainSplit/InputPanel/InputMargin/InputMain/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="RootMargin/RootSplit/MainSplit/InputPanel/InputMargin/InputMain/SendButton" to="." method="_on_send_button_pressed"]

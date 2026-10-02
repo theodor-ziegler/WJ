@@ -24,3 +24,4 @@
 2.1.1 |DeepDev|Features|Prompt
 2.1.2 |DeepDev|Features|RAG
 2.1.3 |DeepDev|Features|History
+2.1.4 |DeepDev|Features|Settings

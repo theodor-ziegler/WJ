@@ -1,0 +1,4 @@
+res://scripts/window.gd
+res://scenes/window.tscn
+res://scripts/backend/backend_socket_wrapper.gd
+res://VersionHistory.txt

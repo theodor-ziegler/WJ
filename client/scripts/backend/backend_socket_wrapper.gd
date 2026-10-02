@@ -14,15 +14,19 @@ signal connection_fail
 signal title_set
 signal context_list(list: Dictionary[int, String])
 
-const SERVER: String = "neuros.click"
 const PORT: int = 3737
 
+var server: String = "neuros.click"
 var client: StreamPeerTCP
 var _output_thread: Thread
 var _input_thread: Thread
 var _output_lock: Mutex = Mutex.new()
 var _send_queue: String = ""
 var _connection_thread: Thread
+
+
+func set_server(ip: String) -> void:
+	server = ip
 
 func connect_socket() -> void:
 	_connection_thread = Thread.new()
@@ -40,7 +44,7 @@ func _number_hex_pad(number: int) -> String:
 func f_connection_thread() -> void:
 	client = StreamPeerTCP.new()
 	client.big_endian = true
-	client.connect_to_host(SERVER, PORT)
+	client.connect_to_host(server, PORT)
 	client.poll()
 	
 	while client.get_status() == StreamPeerTCP.STATUS_CONNECTING:
